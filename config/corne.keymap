@@ -10,6 +10,14 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    chosen {
+      zmk,battery = &vbatt;
+    };
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+        label = "VBATT";
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
