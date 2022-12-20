@@ -18,18 +18,33 @@
         label = "VBATT";
     };
 
+   combos {
+        compatible = "zmk,combos";
+        combo_del {
+            timeout-ms = <30>;
+            key-positions = <15 16>;
+            bindings = <&kp DEL>;
+        };
+   };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
+                      //  1     2     3     4     5
                 &none &kp Q &kp W &kp E &kp R &kp T
                       &kp Y &kp U &kp I &kp O &kp P &none
+                      //  6     7     8     9     10
 
+                      //  13    14    15    16    17
                 &none &kp A &kp S &kp D &kp F &kp G
                       &kp H &kp J &kp K &kp L &kp SEMI &none
+                      //  18    19    20    21    22
 
+                      //  25    26    27    28    29
                 &none &kp Z &kp X &kp C     &kp V   &kp B
                       &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
+                      //  30    31    32    33    34
 
                 &kp LALT &kp SPACE &kp LCMD
                 &kp RCMD &kp SPACE &kp CAPS
