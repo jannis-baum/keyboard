@@ -20,11 +20,10 @@
 
    combos {
         compatible = "zmk,combos";
-        combo_del {
-            timeout-ms = <30>;
-            key-positions = <15 16>;
-            bindings = <&kp DEL>;
-        };
+        combo_tab { timeout-ms = <30>; key-positions = <14 15>; bindings = <&kp TAB>; };
+        combo_del { timeout-ms = <30>; key-positions = <15 16>; bindings = <&kp BSPC>; };
+        combo_esc { timeout-ms = <30>; key-positions = <19 20>; bindings = <&kp ESC>; };
+        combo_ret { timeout-ms = <30>; key-positions = <20 21>; bindings = <&kp RET>; };
    };
 
     keymap {
