@@ -1,12 +1,6 @@
-# My ZMK Keyboard setup
+# Keyboard setup
 
-I use a five-column [Corne](https://github.com/foostan/crkbd) keyboard I made
-wireless with [nice!nano's](https://nicekeyboards.com/nice-nano). This is my
-config of the [ZMK](https://zmk.dev) firmware.
+I use a 36 key [Chocofi](https://github.com/pashutk/chocofi) keyboard with a [Sprintek SK8707-01 trackpoint](https://www.sprintek.com/en/products/pointing_stick/SK8707-01.aspx), made wireless with [nice!nano's](https://nicekeyboards.com/nice-nano).
 
-There is not much here because I use Karabiner Elements rather than my
-keyboard's firmware for all the fancy stuff! Check out my
-[dotfiles](https://github.com/jannis-baum/dotfiles) for my [visualized keyboard
-layers](https://github.com/jannis-baum/dotfiles/blob/main/docs.nosync/keyboard-layers.md)
-and my [karabiner.edn definition
-file](https://github.com/jannis-baum/dotfiles/blob/main/.config/karabiner.edn)
+This repo is where I keep my [ZMK](https://zmk.dev) as well as my [Karabiner Elements](https://karabiner-elements.pqrs.org/) setup, and also the files to print the keyboard case & key caps.
+Since I like having all my keybindings available on my laptop's built-in keyboard as well, most of the interesting stuff is implemented with Karabiner rather than ZMK.
