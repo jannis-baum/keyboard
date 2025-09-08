@@ -9,7 +9,7 @@ import { combi } from './combis';
 import { ifLang, mapLangChars, mapLangSet } from './languages';
 import { fullSimlayer, uniformSimlayer } from './layers';
 import { tk, resolveChar, toDelayedSetVar } from './shared';
-import { kVmapTextObjects, kVnnoremap, kVonoremap, setWin, toHideKitty, toScrolla, toSynapse, toWooshy } from './apps';
+import { kVmapTextObjects, kVnnoremap, setWin, toHideKitty, toScrolla, toSynapse, toWooshy } from './apps';
 
 writeToProfile('karabiner.ts',
     [
@@ -49,15 +49,11 @@ writeToProfile('karabiner.ts',
             // tab switching complicated because it's different in xcode & kv
             // doesn't pass through control character
             // prev tab
-            combi('m,').condition(ifApp('Xcode').unless(), kVnnoremap().unless()).to(tk('⌃⇧_⇥')),
-            combi('m,').condition(ifApp('Xcode').unless(), kVnnoremap()).to('a').to(tk('⌃⇧_⇥')).to('⎋'),
-            combi('m,').condition(ifApp('Xcode'), kVnnoremap().unless()).to(tk('⌘⇧_[')),
-            combi('m,').condition(ifApp('Xcode'), kVnnoremap()).to('a').to(tk('⌘⇧_[')).to('⎋'),
+            combi('m,').condition(ifApp('Xcode').unless()).to(tk('⌃⇧_⇥')),
+            combi('m,').condition(ifApp('Xcode')).to(tk('⌘⇧_[')),
             // next tab
-            combi(',.').condition(ifApp('Xcode').unless(), kVnnoremap().unless()).to(tk('⌃_⇥')),
-            combi(',.').condition(ifApp('Xcode').unless(), kVnnoremap()).to('a').to(tk('⌃_⇥')).to('⎋'),
-            combi(',.').condition(ifApp('Xcode'), kVnnoremap().unless()).to(tk('⌘⇧_]')),
-            combi(',.').condition(ifApp('Xcode'), kVnnoremap()).to('a').to(tk('⌘⇧_]')).to('⎋'),
+            combi(',.').condition(ifApp('Xcode').unless()).to(tk('⌃_⇥')),
+            combi(',.').condition(ifApp('Xcode')).to(tk('⌘⇧_]')),
             // directory prefix
             combi('./').condition(ifApp('kitty')).to(resolveChar('~')).to('/')
                 .condition(ifVar('path-prefix').unless())
