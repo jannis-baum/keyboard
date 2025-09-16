@@ -108,6 +108,8 @@ writeToProfile('karabiner.ts',
         // kindaVim ------------------------------------------------------------
         rule('kV nnoremap', kVnnoremap()).manipulators([
             map('y', '⇧').to('y').to(resolveChar('$')),
+            map('j').to('g').to('j'),
+            map('k').to('g').to('k'),
         ]),
         rule('kV text objects').manipulators([
             kVmapTextObjects({
