@@ -36,6 +36,7 @@ writeToProfile('karabiner.ts',
             combi('ui').condition(ifApp('kitty').unless()).to(toWooshy()),
             combi('ui').condition(ifApp('kitty')).to(tk('⌃_u')),
             combi('io').condition(ifApp('kitty')).to(tk('⌃_o')),
+            combi('io').condition(ifApp('Xcode')).to(tk('⌘⇧_o')),
 
             // HOME ROW
             combi('sd').to('⇥'),
