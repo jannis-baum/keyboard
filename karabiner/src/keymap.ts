@@ -4,6 +4,7 @@ import {
     FromKeyParam,
     toApp, ToEvent, ToKeyParam,
     ifApp, ifVar,
+    mouseMotionToScroll,
 } from 'karabiner.ts'
 import { combi } from './combis';
 import { ifLang, mapLangChars, mapLangSet } from './languages';
@@ -20,6 +21,7 @@ writeToProfile('karabiner.ts',
             map('left⌘').to('left⌘').toIfAlone(toSynapse()),
             map('right⌘').to('right⌘').condition(ifApp('kitty').unless()).toIfAlone(toApp('kitty')),
             map('right⌘').to('right⌘').condition(ifApp('kitty')).toIfAlone(toHideKitty()),
+            mouseMotionToScroll().modifiers('right⌘').options({ speed_multiplier: 2 }),
 
             mapLangSet('left⌥', 'spanish'),
             mapLangSet('right⌥', 'german'),
