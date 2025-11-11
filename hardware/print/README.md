@@ -13,4 +13,4 @@ I printed the parts in the following quantities & materials at [JLC3DP](https://
 | `misc` | 1 | MJF | PA12-HP Nylon | connected parts
 
 The above is the requirement for exactly one keyboard.
-To be safer I recommend printing one extra set for all the connected parts.
+To be safer I recommend printing one extra set for all the [connected parts](https://jlc3dp.com/help/article/Connected-Parts-Printing-Guide).
