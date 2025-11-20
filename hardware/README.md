@@ -7,3 +7,4 @@
 - electronics:
     - [Chocofi kit from beekeeb](https://shop.beekeeb.com/products/chocofi-low-profile-split-keyboard-diy-kit-nice-nano-wireless)
     - [SK8707-01 Trackpoint Sensor](https://www.sprintek.com/en/products/pointing_stick/SK8707-01.aspx)
+    - [custom trackpoint connector PCB](./trackpoint-connector.zip)
