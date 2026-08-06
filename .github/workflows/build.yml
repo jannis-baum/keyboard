@@ -3,10 +3,28 @@ on:
   push:
     paths:
       - firmware/**
+      - zephyr/**
+  pull_request:
+    paths:
+      - firmware/**
+      - zephyr/**
 
 jobs:
   build:
-      uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-      with:
-        config_path: firmware
-        build_matrix_path: firmware/build-matrix.yml
+    # Pinned instead of @main on purpose.
+    #
+    # infused-kim's ZMK fork (see firmware/west.yml) pins an old, pre-4.1 Zephyr.
+    # On 2026-03-03 ZMK added a post-build "ZMK board variant" check to the
+    # reusable workflow (commit a23aa009) that runs
+    #   `west boards --format "{qualifiers}"`.
+    # That old Zephyr's `west boards` has no `qualifiers` field, so the step
+    # crashes with `KeyError: 'qualifiers'` AFTER the firmware has already built.
+    # 2a9ac3ba is the commit right before that check was added: same module-build
+    # behaviour, current GitHub Actions versions, no incompatible check.
+    #
+    # If you ever move firmware/west.yml to a modern ZMK (>= Zephyr 4.1), switch
+    # this back to @main.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@2a9ac3ba7f23e3fd6c6efef986f35fc2b9c55bf3
+    with:
+      config_path: firmware
+      build_matrix_path: firmware/build.yaml

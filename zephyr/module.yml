@@ -1,0 +1,10 @@
+build:
+  settings:
+    # The module root is the repository root ($GITHUB_WORKSPACE, passed by ZMK's
+    # build-user-config workflow via -DZMK_EXTRA_MODULES). Our boards/ live one
+    # level down in firmware/, so the board root is the firmware/ subdirectory.
+    #
+    # NOTE: this module.yml must stay at the repo root (keyboard/zephyr/module.yml),
+    # because the stock ZMK workflow only enables custom-module builds when it finds
+    # `zephyr/module.yml` at the repo root. The firmware itself lives in ../firmware.
+    board_root: firmware
