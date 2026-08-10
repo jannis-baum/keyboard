@@ -21,7 +21,7 @@ writeToProfile('karabiner.ts',
             map('left⌘').to('left⌘').condition(ifApp('kitty').unless()).toIfAlone(toApp('kitty')),
             map('left⌘').to('left⌘').condition(ifApp('kitty')).toIfAlone(toHideKitty()),
             map('right⌘').to('right⌘').toIfAlone(toSynapse()),
-            mouseMotionToScroll().modifiers('right⌘').options({ speed_multiplier: 1 }),
+            mouseMotionToScroll().modifiers('right⌘').options({ speed_multiplier: 1.2 }),
 
             mapLangSet('left⌥', 'spanish'),
             mapLangSet('right⌥', 'german'),
