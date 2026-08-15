@@ -36,6 +36,7 @@ writeToProfile('karabiner.ts',
             combi('ui').condition(ifApp('kitty')).to(tk('⌃_u')),
             combi('io').condition(ifApp('kitty')).to(tk('⌃_o')),
             combi('io').condition(ifApp('Xcode')).to(tk('⌘⇧_o')),
+            combi("qw").condition(ifVar('gui-mode')).to(tk('⌘_0')),
 
             // HOME ROW
             combi('sd').to('⇥'),
@@ -83,7 +84,7 @@ writeToProfile('karabiner.ts',
         // gui
         fullSimlayer<FromKeyParam, ToEvent>('/', 'gui-mode', {
             q: tk('⌘_='),  w: tk('⌘_-'), e: setWin('0,0_1x1'), r: setWin('next_screen'), t: setWin('1,0_1x1'), y: setWin('0,0_2x1'),
-            a: toWooshy(), s: tk('⌘_0'), d: setWin('0,0_1x2'), f: setWin('0,0_2x2'),     g: setWin('1,0_1x2'),
+            a: toScrolla(), s: toWooshy(), d: setWin('0,0_1x2'), f: setWin('0,0_2x2'),     g: setWin('1,0_1x2'),
             z: tk('⌘_['),  x: tk('⌘_]'), c: setWin('0,1_1x1'), v: setWin('prev_screen'), b: setWin('1,1_1x1'), n: setWin('0,1_2x1'),
         } as const, (k, v) => map(k).to(v)),
 
