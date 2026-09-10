@@ -79,7 +79,7 @@
           //   |----25---|----26---|----27---|----28---|----29---|    |----30---|----31---|----32---|----33---|----34---|
           &none   &kp Z     &kp X     &kp C     &kp V     &kp B          &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH    &none
           //                       |---------|---------|---------|    |---------|---------|---------|
-                                    &kp LALT  &kp SPACE &kp LCMD       &kp RCMD  &kp SPACE &kp CAPS
+                                    &kp LALT  &kp SPACE &kp LCMD       &kp RCMD  &kp SPACE &kp RALT
       >;
     };
 
