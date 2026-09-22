@@ -125,6 +125,9 @@ writeToProfile('karabiner.ts',
                 l: resolveChar('('), o: resolveChar(']'), '.': resolveChar('}'),
             })
         ]),
+        rule('Scrolla remaps').manipulators([
+            map(',').to('d').condition(ifVar('SlStatus', 'engaged'))
+        ]),
 
         // MISC ----------------------------------------------------------------
         rule('disable caps').manipulators([
