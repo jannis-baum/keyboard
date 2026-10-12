@@ -59,6 +59,17 @@
     label = "VBATT";
   };
 
+  behaviors {
+    // tap = mouse key, hold = normal key
+    hold_mkp: hold_mkp {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&mkp>;   // <hold>, <tap>
+    };
+  };
+
   combos {
     compatible = "zmk,combos";
     combo_tab { timeout-ms = <30>; key-positions = <14 15>; bindings = <&kp TAB>; };
@@ -79,7 +90,7 @@
           //   |----25---|----26---|----27---|----28---|----29---|    |----30---|----31---|----32---|----33---|----34---|
           &none   &kp Z     &kp X     &kp C     &kp V     &kp B          &kp N     &kp M   &kp COMMA  &kp DOT  &kp FSLH    &none
           //                       |---------|---------|---------|    |---------|---------|---------|
-                                    &kp LALT  &kp LCMD  &kp SPACE      &mkp LCLK &kp RCMD  &kp RCLK
+                                    &kp LALT  &kp LCMD  &kp SPACE      &mkp LCLK &kp RCMD  &hold_mkp LCTRL RCLK
       >;
     };
 
